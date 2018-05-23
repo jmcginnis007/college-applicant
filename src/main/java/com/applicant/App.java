@@ -20,10 +20,8 @@ public class App {
 	}
 
 	@Bean
-	public CommandLineRunner demo() {
-		return (args) -> {
-			CriteriaService service = new CriteriaService();
-			
+	public CommandLineRunner demo(CriteriaService service) {
+		return (args) -> {			
 			CriteriaSuite suite = new AllCriteria();
 			Applicant applicant = new Applicant("Jim", "McGinnis", -1, "CA", 91.0, 1990, 28, 1);
 			
